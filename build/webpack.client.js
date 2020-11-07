@@ -7,9 +7,12 @@ module.exports = merge(base, {
   entry: {
     client: path.resolve(__dirname, '../src/client-entry.js')
   },
+  devServer: {
+    contentBase: "/dist"
+  },
   plugins: [
     new HTMLWebpackPlugin({
-      filename: "index2.html",
+      filename: "index.html",
       template: path.resolve(__dirname, '../public/index.html')
     })
   ]
